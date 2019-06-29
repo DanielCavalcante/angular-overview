@@ -33,4 +33,8 @@ export class TodosService {
     };
     this.http.put(`${this.api}/${id}`, todo).subscribe(res => console.log('Updated!'));
   }
+
+  deleteTodo(id) {
+    return this.http.delete(`${this.api}/${id}`);
+  }
 }
