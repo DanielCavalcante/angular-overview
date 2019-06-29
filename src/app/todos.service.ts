@@ -27,9 +27,10 @@ export class TodosService {
     return this.http.get(`${this.api}/${id}`)
   }
 
-  updateTodo(TodoDescription, id) {
+  updateTodo(TodoDescription, TodoDone, id) {
     const todo = {
-      description: TodoDescription
+      description: TodoDescription,
+      done: TodoDone
     };
     this.http.put(`${this.api}/${id}`, todo).subscribe(res => console.log('Updated!'));
   }
