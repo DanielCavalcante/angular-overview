@@ -12,9 +12,9 @@ export class TodoGetComponent implements OnInit {
   todos: Todo[];
   constructor(private ts: TodosService) { }
 
-  deleteTodo(id) {
+  deleteTodo(id, index) {
     this.ts.deleteTodo(id).subscribe(res => {
-      this.todos.splice(id, 1);
+      this.todos.splice(index, 1);
     })
   }
 
