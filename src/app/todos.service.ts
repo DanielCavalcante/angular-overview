@@ -22,4 +22,15 @@ export class TodosService {
   findAllTodos() {
     return this.http.get(`${this.api}`);
   }
+
+  findTodo(id) {
+    return this.http.get(`${this.api}/${id}`)
+  }
+
+  updateTodo(TodoDescription, id) {
+    const todo = {
+      description: TodoDescription
+    };
+    this.http.put(`${this.api}/${id}`, todo).subscribe(res => console.log('Updated!'));
+  }
 }
