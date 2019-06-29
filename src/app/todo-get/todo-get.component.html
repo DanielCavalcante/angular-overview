@@ -13,7 +13,7 @@
       <td>{{ todo.done }}</td>
       <td>{{ todo.createdAt }}</td>
       <td><a [routerLink]="['/todos/', todo._id]" class="btn btn-primary">Update</a></td>
-      <td><a [routerLink]="" class="btn btn-danger">Delete</a></td>
+      <td><a (click) = "deleteTodo(todo._id)" class="btn btn-danger">Delete</a></td>
     </tr>
   </tbody>
 </table>
