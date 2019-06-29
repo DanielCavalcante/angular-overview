@@ -11,8 +11,8 @@
     <tr *ngFor="let todo of todos">
       <td>{{ todo.description }}</td>
       <td>{{ todo.done }}</td>
-      <td>{{ todo.createAt }}</td>
-      <td><a [routerLink]="['/update', todo._id]" class="btn btn-primary">Update</a></td>
+      <td>{{ todo.createdAt }}</td>
+      <td><a [routerLink]="['/todos/', todo._id]" class="btn btn-primary">Update</a></td>
       <td><a [routerLink]="" class="btn btn-danger">Delete</a></td>
     </tr>
   </tbody>
