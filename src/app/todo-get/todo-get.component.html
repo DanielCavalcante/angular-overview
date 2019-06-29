@@ -15,7 +15,6 @@
       <td>
         <a (click) = "deleteTodo(todo._id, i)" class="btn btn-danger">Delete</a>
         <a [routerLink]="['/todos/', todo._id]" class="btn btn-primary">Update</a>
-        <a (click) = "deleteTodo(todo._id, i)" class="btn btn-info">Done</a>
       </td>
     </tr>
   </tbody>
