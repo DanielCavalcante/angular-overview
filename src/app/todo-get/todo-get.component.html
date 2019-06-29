@@ -3,8 +3,8 @@
     <tr>
       <td>Description</td>
       <td>Done</td>
-      <td>Created at</td>
-      <td colspan="2"></td>
+      <td>Created</td>
+      <td></td>
     </tr>
   </thead>
   <tbody>
@@ -12,8 +12,10 @@
       <td>{{ todo.description }}</td>
       <td>{{ todo.done === true ? 'Sim' : 'Não' }}</td>
       <td>{{ todo.createdAt | date: 'dd/MM/yyyy' }}</td>
-      <td><a [routerLink]="['/todos/', todo._id]" class="btn btn-primary">Update</a></td>
-      <td><a (click) = "deleteTodo(todo._id, i)" class="btn btn-danger">Delete</a></td>
+      <td>
+        <a (click) = "deleteTodo(todo._id, i)" class="btn btn-danger">Delete</a>
+        <a [routerLink]="['/todos/', todo._id]" class="btn btn-primary">Update</a>
+      </td>
     </tr>
   </tbody>
 </table>

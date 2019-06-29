@@ -20,13 +20,14 @@ export class TodoUpdateComponent implements OnInit {
 
   createForm() {
    this.angularForm = this.fb.group({
-     TodoDescription: ['', Validators.required]
+     TodoDescription: ['', Validators.required],
+     TodoDone: []
    })
   }
 
-  updateTodo(TodoDescription) {
+  updateTodo(TodoDescription, TodoDone) {
     this.route.params.subscribe(params => {
-      this.ts.updateTodo(TodoDescription, params.id);
+      this.ts.updateTodo(TodoDescription, TodoDone, params.id);
       this.router.navigate(['todos']);
     })
   }

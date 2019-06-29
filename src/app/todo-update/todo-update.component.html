@@ -15,7 +15,12 @@
         </div>
       </div>
       <div class="form-group">
-        <button (click) = "updateTodo(TodoDescription.value)" type="submit" class="btn btn-primary"
+        <label class="col-md-4">Done</label>
+        <input type="checkbox" formControlName="TodoDone" [checked]="todo.done"
+          #TodoDone [(ngModel)] = "todo.done" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <button (click) = "updateTodo(TodoDescription.value, TodoDone.checked)" type="submit" class="btn btn-primary"
         [disabled]="angularForm.invalid" >
           Update Todo
         </button>
