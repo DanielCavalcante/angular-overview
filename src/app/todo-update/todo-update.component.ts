@@ -26,7 +26,6 @@ export class TodoUpdateComponent implements OnInit {
   }
 
   updateTodo(TodoDescription, TodoDone) {
-    console.log(TodoDone);
     this.route.params.subscribe(params => {
       this.ts.updateTodo(TodoDescription, TodoDone, params.id);
       this.router.navigate(['todos']);
